@@ -1,0 +1,330 @@
+/* CSS reset */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+/* End of CSS reset */
+
+/* Shared styles */
+
+html {
+  margin: 0 auto;
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+button {
+  font-family: 'IBM Plex Sans', Helvetica, Arial, sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+i {
+  cursor: pointer;
+}
+
+/* Header.js */
+
+.header {
+  display: flex;
+  height: 60px;
+  min-width: 1000px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #f7f7f7;
+  background-color: #1c2436;
+}
+
+.logo-area {
+  display: flex;
+  margin-left: 50px;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 20px;
+  font-size: 2.2rem;
+  color: #309852;
+}
+
+.nav-area {
+  display: flex;
+  margin-right: 50px;
+  align-items: center;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.nav-item:first-child {
+  margin-right: 30px;
+}
+
+.nav-item:last-child {
+  margin-right: 8px;
+}
+
+.fa-caret-down {
+  margin-left: 8px;
+}
+
+/* DashboardContainer.js */
+
+.dashboard-container {
+  width: 1000px;
+  margin: 50px auto;
+  padding: 10px;
+}
+
+.back-home {
+  display: flex;
+  justify-content: center;
+}
+
+.back-home-btn {
+  height: 40px;
+  width: 160px;
+  font-size: 1.4rem;
+  color: #f7f7f7;
+  background-color: #309852;
+}
+
+/* DashboardItems.js */
+
+.dashboard-items {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 40px;
+  font-size: 1.4rem;
+  background-color: #fff;
+}
+
+.dashboard-items button {
+  height: 26px;
+  border: 1px solid #dbdbdb;
+  font-size: 1.2rem;
+  color: #4c4c4c;
+}
+
+.account-header,
+.account-details {
+  padding: 10px;
+}
+
+.account-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.account-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px 70px;
+}
+
+.account-detail {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currency {
+  color: #4c4c4c;
+}
+
+.fa-pen {
+  color: #2980b9;
+}
+
+.account-detail-hl {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #2980b9;
+}
+
+.account-detail-note {
+  font-size: 1.2rem;
+  color: #4c4c4c;
+}
+
+/* OverlayWrapper.js */
+
+.overlay {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* ChangeAccountNumber.js */
+
+.popup {
+  width: 60%;
+  max-width: 700px;
+  min-width: 400px;
+  margin-top: 140px;
+  padding: 40px 30px;
+  font-size: 1.4rem;
+  background-color: #fff;
+}
+
+.popup-error-prompt {
+  margin-bottom: 20px;
+}
+
+.popup-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dbdbdb;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.popup-header,
+.popup-details {
+  padding-left: 5px;
+}
+
+.popup-details {
+  margin: 30px 0;
+}
+
+.instruction {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.popup-options {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  width: 100%;
+  display: none;
+  border: 1px solid #dbdbdb;
+  background-color: #fff;
+}
+
+.display-dropdown-menu {
+  display: block;
+}
+
+.selected {
+  font-weight: bold;
+  color: #309852;
+}
+
+.dropdown-item,
+.currency-in-popup,
+.fa-angle-down,
+.account-number {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dropdown-item {
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.dropdown-item:hover {
+  background-color: #dbdbdb;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.currency-menu {
+  margin-right: 10px;
+}
+
+.dropdown-active {
+  border: 1px solid #dbdbdb;
+}
+
+.currency-in-popup {
+  display: inline-block;
+  width: 40px;
+}
+
+.currency-menu > .dropdown-active {
+  background-color: #f3f3f3;
+}
+
+.account-number {
+  display: inline-block;
+}
+
+.account-number-menu {
+  margin-right: 15px;
+}
+
+.popup-btns {
+  display: flex;
+  justify-content: center;
+}
+
+.cancel-btn,
+.determine-btn {
+  height: 30px;
+  border: 1px solid #dbdbdb;
+  font-size: 1.4rem;
+}
+
+.cancel-btn {
+  width: 70px;
+  margin-right: 5px;
+  background-color: #f3f3f3;
+}
+
+.determine-btn {
+  width: 100px;
+  color: #f7f7f7;
+  background-color: #309852;
+}
